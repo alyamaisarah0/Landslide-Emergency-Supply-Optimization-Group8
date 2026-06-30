@@ -139,3 +139,8 @@ STATUS: SUCCESSFUL PATH COMPUTATION
 * **Nurul Syazana Binti Zaidi** (Matric: 225552)
 * **Nurul Aini Binti Ismail** (Matric: 225068)
 * **Alya Maisarah Hannani Binti Ahmad Sukri** (Matric: 226080)
+
+## 6. Presentation Slides
+
+You can interactively view our project presentation slides directly via Canva below:
+👉 [Click Here to View Our Project Presentation Slides](https://canva.link/zmyom4oijm6fp40)
