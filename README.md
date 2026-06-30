@@ -76,19 +76,19 @@ Print Report Card tracking path strings using recursive backward parent lookups
 
 ## 3. Program Demonstration & Output Analysis
 
-#### Implementation Environment
+### Implementation Environment
 * **Language:** Java (JDK 17)
 * **Code Architecture:** Object-oriented modeling split cleanly into `Edge`, `PQNode`, and `Graph` classes. It isolates physical map configurations from dynamic real-time road blockage interventions.
 
-#### Source Code
+### Source Code
 The complete Java source file can be viewed directly in our repository files above: `LandslideEmergencyRouting.java`.
 
-#### Simulated Landslide Interventions
+### Simulated Landslide Interventions
 To mimic actual road failure events, the following road linkages were flagged as closed prior to algorithm execution:
 * Junction B → Village 3 (Blocked)
 * Junction C → Village 3 (Blocked)
 
-#### System Execution Results
+### System Execution Results
 When executed, the program processes the network and outputs the final rescue logistics log:
 
 ```text
@@ -120,12 +120,12 @@ STATUS: SUCCESSFUL PATH COMPUTATION
 
 ## 4. Algorithm Analysis
 
-#### Time Complexity: $O((V + E) \log V)$
+### Time Complexity: $O((V + E) \log V)$
 * **Extraction Operations:** Extracting the minimum element from the binary heap-based `PriorityQueue` takes $O(\log V)$ time. This step occurs once per vertex, resulting in a total cost of $O(V \log V)$ for all vertices.
 * **Relaxation Operations:** In the worst-case scenario, every single edge in the network is examined. For each edge checked, updating the priority queue element requires an up-heap or down-heap rebalancing process that costs $O(\log V)$ time. Across all edges, this takes $O(E \log V)$ time.
 * **Total Bounds:** Combined, the global performance bounds match $O(V \log V + E \log V) = O((V + E) \log V)$. This high efficiency guarantees that the application runs within milliseconds, satisfying real-time deployment needs during an actual landslide emergency.
 
-#### Space Complexity: $O(V + E)$
+### Space Complexity: $O(V + E)$
 * **Adjacency List:** The graph layout is efficiently stored using an Adjacency List. This requires $O(V + E)$ memory allocation to map the 8 vertices and their active, unblocked edge segments.
 * **Tracking Matrices:** The system sets up auxiliary tracking arrays (`distances[]` and `parent[]`) to manage path history data. These tracking metrics scale strictly to linear space $O(V)$. 
 * **Total Bounds:** Combining the adjacency list with the tracking matrices results in an overall space complexity boundary of $O(V + E)$, which fits easily into standard computer memory profiles.
