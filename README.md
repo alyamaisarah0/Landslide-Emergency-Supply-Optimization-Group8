@@ -72,3 +72,29 @@ While PQ is not empty:
             Insert (v, dist[v]) into PQ
             
 Print Report Card tracking path strings using recursive backward parent lookups
+
+3. Program Demonstration & Output AnalysisImplementation EnvironmentLanguage: Java (JDK 17)Code Architecture: Object-oriented modeling split cleanly into Edge, PQNode, and Graph classes. It isolates physical map configurations from dynamic real-time road blockage interventions.Source CodeThe complete Java source file can be viewed directly in our repository files above: [Insert your exact .java file name here, e.g., LandslideEmergencyRouting.java].Simulated Landslide InterventionsTo mimic actual road failure events, the following road linkages were flagged as closed prior to algorithm execution:Junction B → Village 3 (Blocked)Junction C → Village 3 (Blocked)System Execution ResultsWhen executed, the program processes the network and outputs the final rescue logistics log:Plaintext==========================================================================================
+BENTONG DISASTER RESPONSE ROUTING ENGINE - OUTPUT LOG
+==========================================================================================
+[SOURCE NODE]: Bentong Hospital (EOC)
+STATUS: SUCCESSFUL PATH COMPUTATION
+
+▶ Village 1: Bentong Hospital (EOC) → Junction B → Village 1
+  Total Estimated Travel Time: 18 Minutes
+  Route Status                : CLEAR / OPTIMAL
+
+▶ Village 2: Bentong Hospital (EOC) → Junction B → Village 2
+  Total Estimated Travel Time: 15 Minutes
+  Route Status                : CLEAR / OPTIMAL
+
+▶ Village 3: No available route.
+  Total Estimated Travel Time: INF (∞)
+  Route Status                : CRITICAL CRASH - VILLAGE IS ISOLATED
+  Action Required             : ALERT AIR DISPATCH (HELICOPTER REQ)
+
+▶ Village 4: Bentong Hospital (EOC) → Junction A → Junction C → Village 4
+  Total Estimated Travel Time: 32 Minutes
+  Route Status                : CLEAR / ALTERNATIVE DETOUR
+
+==========================================================================================
+Output InterpretationDynamic Rerouting Success: For accessible villages, the system evaluates all options. It routes Village 2 along its clear minimum path of 15 minutes via Junction B, and safely routes Village 4 through an alternative path via Junction A and C.Automated Isolation Trigger: For Village 3, because both incoming land pathways are completely blocked, the distance value remains at infinity (INF). The system successfully flags this state, warning dispatchers to bypass ground routing entirely and alert air support units immediately.4. Algorithm AnalysisTime Complexity: $O((V + E) \log V)$Extraction Operations: Extracting the minimum element from the binary heap-based PriorityQueue takes $O(\log V)$ time. This step occurs once per vertex, resulting in $O(V \log V)$.Relaxation Operations: In the worst case, every edge is examined. For each edge checked, updating the priority queue element requires an up-heap/down-heap rebalancing process that costs $O(\log V)$ time. Across all edges, this takes $O(E \log V)$.Total Bounds: Combined, the performance bounds match $O((V + E) \log V)$, which runs within milliseconds for real-time crisis response setups.Space Complexity: $O(V + E)$The graph layout is efficiently stored using an Adjacency List, requiring $O(V + E)$ memory allocation to map vertices and active edge states.Tracking matrices (distances[] and parent[]) require supplementary tracking arrays scaled strictly to linear space $O(V)$.5. Group Portfolio ContributorsRasyidah Liana Binti Abd Halim (Matric: 222239)Nur Sofea Binti Muhalis (Matric: 224704)Nurul Syazana Binti Zaidi (Matric: 225552)Nurul Aini Binti Ismail (Matric: 225068)Alya Maisarah Hannani Binti Ahmad Sukri (Matric: 226080)
