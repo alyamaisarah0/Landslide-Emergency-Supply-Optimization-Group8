@@ -142,5 +142,6 @@ STATUS: SUCCESSFUL PATH COMPUTATION
 
 ## 6. Presentation Slides
 
-You can interactively view our project presentation slides directly via Canva below:
-👉 [Click Here to View Our Project Presentation Slides](https://canva.link/zmyom4oijm6fp40)
+![Slide 1](1.jpg)
+![Slide 2](2.ipg)
+![Slide 3](3.jpg)
